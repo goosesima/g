@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- The Gallery as lightbox dialog, should be a document body child element -->
+  <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" aria-label="image gallery" aria-modal="true" role="dialog">
+    <div class="slides" aria-live="polite"></div>
+    <h3 class="title"></h3>
+    <a class="prev" aria-controls="blueimp-gallery" aria-label="previous slide" aria-keyshortcuts="ArrowLeft"></a>
+    <a class="next" aria-controls="blueimp-gallery" aria-label="next slide" aria-keyshortcuts="ArrowRight"></a>
+    <a class="close" aria-controls="blueimp-gallery" aria-label="close" aria-keyshortcuts="Escape"></a>
+    <a class="play-pause" aria-controls="blueimp-gallery" aria-label="play slideshow" aria-keyshortcuts="Space"
+      aria-pressed="false" role="button"></a>
+    <ol class="indicator"></ol>
+  </div>
+  <div id="links">
+    <!-- INSERT HERE -->
+  </div>
+  <script src="js/blueimp-gallery.min.js"></script>
+  <script>
+    document.getElementById('links').onclick = function (event) {
+      event = event || window.event
+      var target = event.target || event.srcElement
+      var link = target.src ? target.parentNode : target
+      var options = { index: link, event: event }
+      var links = this.getElementsByTagName('a')
+      blueimp.Gallery(links, options)
+    }
+  </script>
+  <p>Last update: unknown</p>
+</body>
+</html>

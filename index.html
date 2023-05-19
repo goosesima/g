@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="css/blueimp-gallery.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- The Gallery as lightbox dialog, should be a document body child element -->
+  <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" aria-label="image gallery" aria-modal="true" role="dialog">
+    <div class="slides" aria-live="polite"></div>
+    <h3 class="title"></h3>
+    <a class="prev" aria-controls="blueimp-gallery" aria-label="previous slide" aria-keyshortcuts="ArrowLeft"></a>
+    <a class="next" aria-controls="blueimp-gallery" aria-label="next slide" aria-keyshortcuts="ArrowRight"></a>
+    <a class="close" aria-controls="blueimp-gallery" aria-label="close" aria-keyshortcuts="Escape"></a>
+    <a class="play-pause" aria-controls="blueimp-gallery" aria-label="play slideshow" aria-keyshortcuts="Space"
+      aria-pressed="false" role="button"></a>
+    <ol class="indicator"></ol>
+  </div>
+  <div id="links">
+    <a href="i/2020-12-07_21.10.05.png" title="2020-12-07_21.10.05.png"><img src="i/2020-12-07_21.10.05.png" alt="2020-12-07_21.10.05.png"></a><a href="i/2020-12-08_18.53.21-min.png" title="2020-12-08_18.53.21-min.png"><img src="i/2020-12-08_18.53.21-min.png" alt="2020-12-08_18.53.21-min.png"></a><a href="i/2020-12-11_16.14.23-min.png" title="2020-12-11_16.14.23-min.png"><img src="i/2020-12-11_16.14.23-min.png" alt="2020-12-11_16.14.23-min.png"></a><a href="i/2020-12-11_19.30.34.png" title="2020-12-11_19.30.34.png"><img src="i/2020-12-11_19.30.34.png" alt="2020-12-11_19.30.34.png"></a><a href="i/2020-12-12_17.52.25.png" title="2020-12-12_17.52.25.png"><img src="i/2020-12-12_17.52.25.png" alt="2020-12-12_17.52.25.png"></a><a href="i/2020-12-26_17.37.54.png" title="2020-12-26_17.37.54.png"><img src="i/2020-12-26_17.37.54.png" alt="2020-12-26_17.37.54.png"></a><a href="i/2020-12-30_19.58.19-min.png" title="2020-12-30_19.58.19-min.png"><img src="i/2020-12-30_19.58.19-min.png" alt="2020-12-30_19.58.19-min.png"></a><a href="i/2021-01-08_16.43.18.png" title="2021-01-08_16.43.18.png"><img src="i/2021-01-08_16.43.18.png" alt="2021-01-08_16.43.18.png"></a><a href="i/2021-01-11_20.10.40.png" title="2021-01-11_20.10.40.png"><img src="i/2021-01-11_20.10.40.png" alt="2021-01-11_20.10.40.png"></a><a href="i/2021-05-29_13.24.33.png" title="2021-05-29_13.24.33.png"><img src="i/2021-05-29_13.24.33.png" alt="2021-05-29_13.24.33.png"></a><a href="i/2021-07-17_17.05.48.png" title="2021-07-17_17.05.48.png"><img src="i/2021-07-17_17.05.48.png" alt="2021-07-17_17.05.48.png"></a><a href="i/2021-07-22_10.04.45.png" title="2021-07-22_10.04.45.png"><img src="i/2021-07-22_10.04.45.png" alt="2021-07-22_10.04.45.png"></a><a href="i/83573061_119483456066957_1277277646830640149_n.jpg" title="83573061_119483456066957_1277277646830640149_n.jpg"><img src="i/83573061_119483456066957_1277277646830640149_n.jpg" alt="83573061_119483456066957_1277277646830640149_n.jpg"></a><a href="i/By discord id: 355690593868972042.png" title="By discord id: 355690593868972042.png"><img src="i/By discord id: 355690593868972042.png" alt="By discord id: 355690593868972042.png"></a><a href="i/IMG_20210814_111040.jpg" title="IMG_20210814_111040.jpg"><img src="i/IMG_20210814_111040.jpg" alt="IMG_20210814_111040.jpg"></a><a href="i/IMG_20210814_111222.jpg" title="IMG_20210814_111222.jpg"><img src="i/IMG_20210814_111222.jpg" alt="IMG_20210814_111222.jpg"></a><a href="i/Maze-Linerly discord.png" title="Maze-Linerly discord.png"><img src="i/Maze-Linerly discord.png" alt="Maze-Linerly discord.png"></a><a href="i/maze.jpg" title="maze.jpg"><img src="i/maze.jpg" alt="maze.jpg"></a><a href="i/my.png" title="my.png"><img src="i/my.png" alt="my.png"></a>
+  </div>
+  <script src="js/blueimp-gallery.min.js"></script>
+  <script>
+    document.getElementById('links').onclick = function (event) {
+      event = event || window.event
+      var target = event.target || event.srcElement
+      var link = target.src ? target.parentNode : target
+      var options = { index: link, event: event }
+      var links = this.getElementsByTagName('a')
+      blueimp.Gallery(links, options)
+    }
+  </script>
+  <p>Last update: Fri, 19 May 2023 13:03:25 GMT</p>
+</body>
+</html>

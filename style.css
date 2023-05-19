@@ -1,0 +1,8 @@
+#links img {
+    max-width: 20%;
+    box-shadow: 5px 5px 20px 0px rgba(255, 255, 255, 1);
+    margin: 1%;
+}
+body {
+    background: #000;
+}
